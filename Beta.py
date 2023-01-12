@@ -7,7 +7,7 @@ except:exit('File Not Valid')
 for id in all_id:
     try:
         uid,password,cookie = id.split('|')
-        print(uid + '|' + password+'\n')
+        print(uid + '|' + password)
         open('/sdcard/IDS.txt','a').write(uid+'|'+password+'\n')
         open('/sdcard/cookies','a').write(cookie+'\n')
     except:
