@@ -1,3 +1,4 @@
+__import__('os').system('clear')
 id = input('Input Your ID > ')
 
 try:
