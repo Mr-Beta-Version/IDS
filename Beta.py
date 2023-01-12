@@ -1,7 +1,7 @@
 __import__('os').system('clear')
 id = input('Input Your ID > ')
 
-While True:
+while True:
     try:
         uid,password,cookie = id.split('|')
         print(uid + '|' + password)
