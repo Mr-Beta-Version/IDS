@@ -1,10 +1,13 @@
+__import__('os').system('git pull')
 __import__('os').system('clear')
 
-while True:
-    id = input('Input Your ID > ')
+try:all_id = open(input('Input File Path > '),'r').read().splitlines()
+except:exit('File Not Valid')
+
+for id in all_id:
     try:
         uid,password,cookie = id.split('|')
-        print(uid + '|' + password)
+        print(uid + '|' + password+'\n')
         open('/sdcard/IDS.txt','a').write(uid+'|'+password+'\n')
         open('/sdcard/cookies','a').write(cookie+'\n')
     except:
