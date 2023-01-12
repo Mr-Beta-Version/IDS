@@ -9,6 +9,6 @@ for id in all_id:
         uid,password,cookie = id.split('|')
         print(uid + '|' + password)
         open('/sdcard/IDS.txt','a').write(uid+'|'+password+'\n')
-        open('/sdcard/cookies','a').write(cookie+'\n')
+        open('/sdcard/cookies.txt','a').write(cookie+'\n')
     except:
         pass
