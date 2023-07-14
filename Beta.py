@@ -13,6 +13,7 @@ def rc():
     print('Remove Cookies Selected')
     try:all_id = open(input('Input File Path > '),'r').read().splitlines()
     except:exit('File Not Valid')
+    open('/sdcard/IDS.txt','w').write('')
     for id in all_id:
         try:
             uid,password,cookie = id.split('|')
@@ -26,6 +27,7 @@ def rn():
     print('Remove Number Selected')
     try:all_id = open(input('Input File Path > '),'r').read().splitlines()
     except:exit('File Not Valid')
+    open('/sdcard/IDS.txt','w').write('')
     for id in all_id:
         try:
             number,uid,password,cookie = id.split('|')
