@@ -30,9 +30,15 @@ def rn():
     open('/sdcard/IDS.txt','w').write('')
     for id in all_id:
         try:
-            number,uid,password,cookie = id.split('|')
-            print(uid + '|' + password)
-            open('/sdcard/IDS.txt','a').write(uid+'|'+password+'|'+cookie+'\n')
+            count = len(id.split('|'))
+            if count==4:
+                number,uid,password,cookie = id.split('|')
+                print(uid + '|' + password)
+                open('/sdcard/IDS.txt','a').write(uid+'|'+password+'|'+cookie+'\n')
+            elif count==3:
+                number,uid,password = id.split('|')
+                print(uid + '|' + password)
+                open('/sdcard/IDS.txt','a').write(uid+'|'+password+'\n')
         except:
            pass
             
