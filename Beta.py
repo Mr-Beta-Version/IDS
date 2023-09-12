@@ -45,7 +45,7 @@ def rn():
             elif count==3:
                 number,uid,password = id.split('|')
                 print(uid + '|' + password)
-                open(f'/sdcard/{save}.txt','a').write(uid+'|'+password+'\n')
+                open(f'/sdcard/{save}','a').write(uid+'|'+password+'\n')
         except:
            pass
             
