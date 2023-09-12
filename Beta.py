@@ -2,6 +2,7 @@ __import__('os').system('git pull')
 __import__('os').system('clear')
 def menu():
     __import__('os').system('clear')
+    print('*-Programme By Mr. Beta-*')
     print('1. Cookies Remove')
     print('2. Number Remove')
     choice = input('>> ')
@@ -13,13 +14,16 @@ def rc():
     print('Remove Cookies Selected')
     try:all_id = open(input('Input File Path > '),'r').read().splitlines()
     except:exit('File Not Valid')
-    open('/sdcard/IDS.txt','w').write('')
+    print('Enter Output File Name')
+    print('Example : bd69ids.txt')
+    save = input('>> ')
+    open(f'/sdcard/{save}','w').write('')
     for id in all_id:
         try:
             uid,password,cookie = id.split('|')
             print(uid + '|' + password)
-            open('/sdcard/IDS.txt','a').write(uid+'|'+password+'\n')
-            open('/sdcard/cookies.txt','a').write(cookie+'\n')
+            open(f'/sdcard/{save}','a').write(uid+'|'+password+'\n')
+          #  open('/sdcard/cookies.txt','a').write(cookie+'\n')
         except:
            pass
 
@@ -27,18 +31,21 @@ def rn():
     print('Remove Number Selected')
     try:all_id = open(input('Input File Path > '),'r').read().splitlines()
     except:exit('File Not Valid')
-    open('/sdcard/IDS.txt','w').write('')
+    print('Enter Output File Name')
+    print('Example : bd69ids.txt')
+    save = input('>> ')
+    open(f'/sdcard/{save}','w').write('')
     for id in all_id:
         try:
             count = len(id.split('|'))
             if count==4:
                 number,uid,password,cookie = id.split('|')
                 print(uid + '|' + password)
-                open('/sdcard/IDS.txt','a').write(uid+'|'+password+'|'+cookie+'\n')
+                open(f'/sdcard/{save}','a').write(uid+'|'+password+'|'+cookie+'\n')
             elif count==3:
                 number,uid,password = id.split('|')
                 print(uid + '|' + password)
-                open('/sdcard/IDS.txt','a').write(uid+'|'+password+'\n')
+                open(f'/sdcard/{save}.txt','a').write(uid+'|'+password+'\n')
         except:
            pass
             
